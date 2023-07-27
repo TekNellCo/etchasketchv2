@@ -1,18 +1,20 @@
 const drawingarea = document.querySelector('.drawingarea');
 let input = document.querySelector('input');
-let dimensions = 16;
-window.onload = populateDiv(dimensions);
+populateDiv(input.value)
 let divfill = document.querySelectorAll('.divfill');
 let buttonColor = document.querySelectorAll('.colorbutton');
-// let reset = document.querySelector('.reset')
 let color = "black"
 let reset = document.querySelector('.reset')
 reset.addEventListener('click',clear)
 
+input.addEventListener("change",()=>{
+    clearGrid();
+    populateDiv(input.value);
+})
 
-// input.addEventListener("change",()=>{
-//     populateDiv(input.value);
-// })a
+function clearGrid(){
+    drawingarea.innerHTML = ""
+}
 
 function clear(){
     divfill.forEach((div)=>{
@@ -21,7 +23,6 @@ function clear(){
 }
 
 function populateDiv(a){
-
     for(i=0; i< a*a; ++i){
     const drawingareadivs = document.createElement('div');
     drawingareadivs.classList.add('divfill');
@@ -42,5 +43,13 @@ divfill.forEach((div)=>{
     })
 })
 
+
+// function brush(){
+//     divfill.forEach((div)=>{
+//         div.addEventListener("mouseover",()=>{
+//             div.style.cssText=`background-color: ${color}`
+//         })
+//     })
+// }
 
 
