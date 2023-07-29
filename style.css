@@ -3,17 +3,73 @@
     margin: 0;
     padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap');
 
+body{
+    background-image: url(/images/pexels-kseniya-lapteva-9176068.jpg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+
+}
+.title{
+    color:#d4d5ce;
+    font-size: 7rem;
+    font-family: 'Tektur',;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    width: 40vw;
+    height: 100vh;
+    border: solid;
+}
+.buttonbox{
+    display: flex;
+    justify-content: space-around;
+
+    padding: 2rem;
+    width: 60rem;
+    gap: 2rem;
+}
+button{
+    height:2.5rem;
+    width:5.5rem;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 0px 1px 0.3rem;
+    background-color: #60605f;
+}
+button:active{
+    box-shadow: inset 0 0  0.3rem;
+}
 .drawingarea{
+    background-color: #d4d5ce;
     display: grid;
     grid-template-rows: repeat(16,1fr) ;
     grid-template-columns: repeat(16,1fr);
+    border: none;
+    height:50rem;
+    width:50rem;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: inset 0px 0 9px;
+}
+.inputbox{
+    display: flex;
+    justify-content: center;
     border: solid;
-    height:700px;
-    width:700px;
+    padding:2rem;
+    width: 30rem
+}
+input{
+    width: 25rem;
 }
 
-.divfill{
-    /* border:solid; */
+/* .divfill{
     background-color: white;
-}
+} */

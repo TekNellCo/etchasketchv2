@@ -5,20 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch v2</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Tektur:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="colorbutton">Black</button>
-    <button class="colorbutton">Blue</button>
-    <button class="colorbutton">Red</button>
-    <button class="colorbutton">Green</button>
-    <button class="colorbutton">Pink</button>
-    <button class="colorbutton">Orange</button>
-    <button class="colorbutton">Rainbow</button>
-    <button class="random">Random</button>
+   <div class="container">
+    <h1 class="title">Etch-A-Sketch</h1>
 
-    <button class="reset">Reset</button>
+
+    <div class="buttonbox">
+        <button class="colorbutton">Black</button>
+        <button class="colorbutton">Blue</button>
+        <button class="colorbutton">Red</button>
+        <button class="colorbutton">Green</button>
+        <button class="colorbutton">Pink</button>
+        <button class="colorbutton">Orange</button>
+        <button class="colorbutton">Rainbow</button>
+        <button class="random">Random</button>
+        <button class="reset">Reset</button>
+    
+    </div>
+
+
+
+
     <div class="drawingarea"></div>
-    <input type="range" value="" min="16" max="64">
+
+    <div class="inputbox">
+        <input type="range" value="" min="16" max="64">
+    </div>
+   </div>
 
     <script src="script.js"></script>
 </body>
