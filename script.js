@@ -7,10 +7,14 @@ let reset = document.querySelector('.reset');
 reset.addEventListener('click',clearGrid);
 input.addEventListener("change",clearGrid);
 let random = document.querySelector('.random');
+let rainbow = document.querySelector('.rainbow');
+
+
+
 
 
 random.addEventListener('click',()=>{
-    return color = `hsl(${Math.floor(Math.random()* 360)},${Math.floor(Math.random()* 100)}%,${Math.floor(Math.random()* 100)}%)`
+    return color = `hsl(${Math.floor(Math.random()* 360)},100%,50%)`
 
 })
 
@@ -28,10 +32,10 @@ function populateDiv(a){
     drawingarea.append(drawingareadivs);
     drawingarea.style.cssText = `grid-template-rows:repeat(${a},1fr); grid-template-columns: repeat(${a},1fr)`;
     drawingareadivs.addEventListener("mouseover",()=>{
-    drawingareadivs.style.backgroundColor = `${color}`;
-    })
-    }
-}
+        if(color == "Rainbow"){
+            drawingareadivs.style.backgroundColor = `hsl(${Math.floor(Math.random()* 360)},100%,50%)`;
+        }else {
+    drawingareadivs.style.backgroundColor = `${color}`; }})}}
 
 buttonColor.forEach((btn)=>{
     btn.addEventListener('click',()=>{
