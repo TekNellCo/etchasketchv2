@@ -10,17 +10,14 @@ let random = document.querySelector('.random');
 let rainbow = document.querySelector('.rainbow');
 
 
-
-
-
+// CREATES RANDOM BUTTON
 random.addEventListener('click',()=>{
     return color = `hsl(${Math.floor(Math.random()* 360)},100%,50%)`
 
 })
 
 
-
-
+// ERASES EVERYTHING IN THE DRAWING AREA AND REPOPULATES IT WITH NEW DIVS
 function clearGrid(){
     drawingarea.innerHTML = "";
     populateDiv(input.value);
@@ -37,6 +34,9 @@ function populateDiv(a){
         }else {
     drawingareadivs.style.backgroundColor = `${color}`; }})}}
 
+
+
+// GRABS COLORS FROM TEXT BUTTONS
 buttonColor.forEach((btn)=>{
     btn.addEventListener('click',()=>{
         return color = btn.innerText
